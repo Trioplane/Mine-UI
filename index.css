@@ -1,0 +1,228 @@
+/* INIT AND VARS */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #888;
+    margin: 1em;
+    height: 135vh;
+}
+
+@font-face {
+    font-family: MinecraftSeven;
+    src: url(MinecraftSeven.ttf);
+}
+
+@font-face {
+    font-family: MinecraftTen;
+    src: url(MinecraftTen.ttf);
+}
+
+:root {
+    --pure-white: #F5FFFF;
+    --bg-white: #D0D1D7;
+    --white: #E0E2E4;
+    --gray: #58585B;
+    --black: #1F2123;
+    --pure-black: #000;
+
+    --green: #67985A;
+    --bg-green: #3C8526;
+    --shadow-green: #385C17;
+    --dark-green: #155309;
+}
+
+body > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+/* ---------------------------------------------  */
+
+/* STYLES: BEDROCK */
+
+/* ---------------------------------------------  */
+
+/* BUTTONS */
+
+/* PRIMARY (GREEN) */
+
+button.bedrock.primary {
+    appearance: none;
+    position: relative;
+    background-color: var(--bg-green);
+    border: var(--green) solid 3px;
+    padding: 1.2rem 3.9rem 1.2rem 3.9rem;
+    font-family: MinecraftSeven;
+    font-size: 1.3rem;
+    color: var(--pure-white);
+    letter-spacing: 0.02rem;
+}
+
+button.bedrock.primary::before {
+    content: " ";
+    position: absolute;
+    z-index: -1;
+    top: -3px;
+    right: -3px;
+    left: -3px;
+    bottom: -7px;
+    border-bottom: var(--dark-green) solid 5px;
+}
+
+button.bedrock.primary::after {
+    content: " ";
+    position: absolute;
+    z-index: -2;
+    top: -5px;
+    right: -5px;
+    left: -5px;
+    bottom: -9px;
+    border-top: var(--black) solid 5px;
+    border-left: var(--black) solid 5px;
+    border-right: var(--black) solid 5px;
+    border-bottom: var(--black) solid 33px;
+}
+
+/* HERO (GREEN, MINECRAFTTEN) */
+
+button.bedrock.hero {
+    appearance: none;
+    position: relative;
+    background-color: var(--bg-green);
+    border: var(--green) solid 3px;
+    padding: .6rem 4rem .6rem 4rem;
+    font-family: MinecraftTen;
+    font-size: 1.5rem;
+    color: var(--pure-white);
+    text-shadow: var(--shadow-green) 3px 3px 0;
+    letter-spacing: 0.02rem;
+}
+
+button.bedrock.hero::before {
+    content: " ";
+    position: absolute;
+    z-index: -1;
+    top: -3px;
+    right: -3px;
+    left: -3px;
+    bottom: -7px;
+    border-bottom: var(--dark-green) solid 5px;
+}
+
+button.bedrock.hero::after {
+    content: " ";
+    position: absolute;
+    z-index: -2;
+    top: -5px;
+    right: -5px;
+    left: -5px;
+    bottom: -9px;
+    border-top: var(--black) solid 5px;
+    border-left: var(--black) solid 5px;
+    border-right: var(--black) solid 5px;
+    border-bottom: var(--black) solid 33px;
+}
+
+/* SECONDARY (WHITE BUTTON) */
+
+button.bedrock.secondary {
+    appearance: none;
+    position: relative;
+    background-color: var(--bg-white);
+    border: var(--white) solid 3px;
+    padding: 1.2rem 3.9rem 1.2rem 3.9rem;
+    font-family: MinecraftSeven;
+    font-size: 1.3rem;
+    color: var(--black);
+    letter-spacing: 0.02rem;
+  }
+  
+button.bedrock.secondary::before {
+    content: " ";
+    position: absolute;
+    z-index: 0;
+    top: -3px;
+    right: -3px;
+    left: -3px;
+    bottom: -7px;
+    border-bottom: var(--gray) solid 5px;
+}
+  
+button.bedrock.secondary::after {
+    content: " ";
+    position: absolute;
+    z-index: -1;
+    top: -5px;
+    right: -5px;
+    left: -5px;
+    bottom: -9px;
+    border-top: var(--black) solid 5px;
+    border-left: var(--black) solid 5px;
+    border-right: var(--black) solid 5px;
+    border-bottom: var(--black) solid 33px;
+}
+
+/* ---------------------------------------------  */
+
+button.bedrock.secondary.small {
+    padding: .7rem 4rem .7rem 4rem;
+}
+
+button.bedrock.secondary.small::after {
+    border-bottom: var(--black) solid 48px;
+}
+
+/* ---------------------------------------------  */
+
+button.bedrock.secondary.big {
+    padding: 1.2rem 9.5rem 1.2rem 9.5rem;
+}
+
+/* ---------------------------------------------  */
+
+/* INPUTS */
+
+input[type="text"].bedrock {
+    appearance: none;
+    position: relative;
+    width: 30%;
+    background-color: #303234;
+    padding: 1rem 10rem 1rem 2rem;
+    border: none;
+    border-top: 6px solid #1F1F21;
+    outline: 4px solid #1E2021;
+    font-family: MinecraftSeven;
+    color: var(--pure-white);
+    font-size: 1.3rem;
+}
+
+/* --------------------------------------------- */
+
+/* CONTAINERS */
+
+.container.bedrock {
+    margin: 0;
+    width: 100%;
+}
+
+.container.bedrock > .section {
+    isolation: isolate;
+    background-color: #484A4B;
+    padding: 0.5rem 3rem 1rem 3rem;
+    margin: 0;
+    border-top: solid 3px #5E6061;
+    border-bottom: solid 3px #393B3C;
+}
+
+.container.bedrock > .section > p {
+    font-family: MinecraftSeven;
+    font-size: 1.3rem;
+    color: var(--pure-white);
+    padding: 0;
+    margin: 0 0 1rem 0;
+}
